@@ -9,14 +9,18 @@ if (NOT GTK3_FOUND AND NOT GTK2_FOUND)
 	# Re-start the package search without the QUIET option so that the
 	# user can see what's wrong in details	
 	find_package(GTK3)
-	find_package(GKT2)
+	find_package(GTK2)
 	# And stop since there's not much we can do without GTK anyway
 	# TODO: continue if we're building only wxBase (wxUSE_GUI=0)
 	message(FATAL_ERROR "Could not find any usable GTK 2/3 installations")
-elseif (GTK3_FOUND AND GTK2_FOUND)
-	# We found both versions. Default to the "safest" version (GTK2)
-	# but add a user option to override.
-	option(WXBUILD_USE_GTK3 "Use GTK3 instead of GTK2" OFF)
+elseif (GTK3_FOUND)
+	if (GTK2_FOUND)
+		# We found both versions. Default to the "safest" version (GTK2)
+		# but add a user option to override.
+		option(WXBUILD_USE_GTK3 "Use GTK3 instead of GTK2" OFF)
+	else ()
+		set(WXBUILD_USE_GTK3 ON)
+	endif ()
 endif ()
 
 if (WXBUILD_USE_GTK3)
