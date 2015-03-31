@@ -270,9 +270,10 @@ else ()
 	endif ()
 endif ()
 
-
-my_check_parameter_type("socklen_t;size_t;int" "getsockname(0, 0, &the_param);" "sys/types.h;sys/socket.h" WX_SOCKLEN_T)
-my_check_parameter_type("socklen_t;size_t;int" "getsockopt(0, 0, 0, 0, &the_param);" "sys/types.h;sys/socket.h" SOCKOPTLEN_T)
+if (NOT MINGW)
+	my_check_parameter_type("socklen_t;size_t;int" "getsockname(0, 0, &the_param);" "sys/types.h;sys/socket.h" WX_SOCKLEN_T)
+	my_check_parameter_type("socklen_t;size_t;int" "getsockopt(0, 0, 0, 0, &the_param);" "sys/types.h;sys/socket.h" SOCKOPTLEN_T)
+endif ()
 
 
 my_check_symbol_exists(js_event "linux/joystick.h" HAVE_JOYSTICK_H)
