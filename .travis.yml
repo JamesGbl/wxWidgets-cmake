@@ -2,7 +2,7 @@ language: cpp
 
 compiler:
   - gcc
-  - clang
+  #- clang
 
 before_script:
   - wget https://github.com/wxWidgets/wxWidgets/archive/WX_3_0_2.tar.gz -O /tmp/WX_3_0_2.tar.gz
