@@ -1,4 +1,4 @@
-A CMake build system for wxWidgets
+A CMake build system for wxWidgets [![Build Status](https://travis-ci.org/tibogens/wxWidgets-cmake.svg?branch=master)](https://travis-ci.org/tibogens/wxWidgets-cmake)
 ==================================
 
 This is a new build system for wxWidgets based on CMake instead of autotools/bakefiles/etc.
