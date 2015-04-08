@@ -5,8 +5,8 @@ compiler:
   - clang
 
 script:
-  - export BUILD_DIR=_build-$(TRAVIS_OS_NAME)
-  - mkdir $(BUILD_DIR)
+  - export BUILD_DIR=_build-$TRAVIS_OS_NAME
+  - mkdir $BUILD_DIR
   - cd $BUILD_DIR
   - ccmake ..
   - make
