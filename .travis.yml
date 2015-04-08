@@ -4,16 +4,15 @@ compiler:
   - gcc
   - clang
 
-env:
-	BUILD_DIR=_build-$TRAVIS_OS_NAME
-	
+env: BUILD_DIR=_build-$TRAVIS_OS_NAME
+
 script:
-	- mkdir $BUILD_DIR
-	- cd $BUILD_DIR
-	- ccmake ..
-	- make
-	
-	
+  - mkdir $BUILD_DIR
+  - cd $BUILD_DIR
+  - ccmake ..
+  - make
+  
+
 # Original wxWidgets .travis.yml file below
 # (for reference)
 # -------------------------------------------
