@@ -15,6 +15,7 @@ before_script:
   - python gen_setups.py
   
 script:
+  - cd $TRAVIS_BUILD_DIR
   - export BUILD_DIR=_build-$TRAVIS_OS_NAME
   - mkdir $BUILD_DIR
   - cd $BUILD_DIR
