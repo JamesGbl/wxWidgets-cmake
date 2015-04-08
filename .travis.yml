@@ -5,7 +5,7 @@ compiler:
   - clang
 
 before_script:
-  - wget https://github.com/wxWidgets/wxWidgets/archive/WX_3_0_2.tar.gz
+  - wget https://github.com/wxWidgets/wxWidgets/archive/WX_3_0_2.tar.gz -O -O /tmp/WX_3_0_2.tar.gz
   - tar -xvzf /tmp/WX_3_0_2.tar.gz
   - cp -r /tmp/wxWidgets-WX_3_0_2/* .
   - cd build/cmake
