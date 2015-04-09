@@ -104,4 +104,12 @@ elseif (MSVC)
 	
 	# add_definitions(-D__VISUALC__=${WXBUILD_MSVC_COMPILER})
 	
+elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+	# using regular Clang or AppleClang
+	# http://stackoverflow.com/questions/10046114/in-cmake-how-can-i-test-if-the-compiler-is-clang/10055571#10055571
+	
+	# Fix for issue #16
+	# https://github.com/tibogens/wxWidgets-cmake/issues/16
+	set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -std=c++11")
+	
 endif ()
