@@ -1,3 +1,14 @@
+Outdated page and latest info (2017)
+=================================
+
+This project was refused by wxWidgets maintainers back in 2014 [1], so my interest in pursuing the effort went down to zero. Two years later, a CMake build system is actually called for on the wx-dev mailing list [2]. I was pissed off and didn't really participate in the discussion. However, Tobias Taschner decided to implement it (see [2] as well), and his work can now be considered as the "official" CMake build system for wxWidgets.
+
+The project lives at https://github.com/TcT2k/wxWidgets/tree/build_cmake and the pull request to the wxWidgets tree at https://github.com/wxWidgets/wxWidgets/pull/330.
+
+[1] https://groups.google.com/forum/#!topic/wx-dev/zKw6ZmG0T_c
+[2] https://groups.google.com/forum/#!topic/wx-dev/TAKEFJYsOGI
+
+
 A CMake build system for wxWidgets [![Build Status](https://travis-ci.org/tibogens/wxWidgets-cmake.svg?branch=master)](https://travis-ci.org/tibogens/wxWidgets-cmake)
 ==================================
 
